@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santiks Coffee & Calm</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="image/logo.png" type="image/png" />
+    <!-- Bootstrap & AOS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Toggle Mode Button -->
+    <button
+      id="toggle-mode"
+      class="btn btn-sm btn-light position-fixed top-0 end-0 m-3 z-3"
+    >
+      Mode Gelap
+    </button>
+
+    <!-- Navbar -->
+    <header class="sticky-top shadow-lg">
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-gradient">
+        <div class="container">
+          <a href="#" class="navbar-brand">
+            <img src="image/logo.png" alt="Logo" width="90" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto d-flex gap-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#menu">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tentang">Tentang</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#kontak">Kontak</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero-slider">
+      <div
+        class="hero-slide active"
+        style="background-image: url('image/banner1.jpg')"
+      ></div>
+      <div
+        class="hero-slide"
+        style="background-image: url('image/banner2.jpg')"
+      ></div>
+      <div
+        class="hero-slide"
+        style="background-image: url('image/banner3.jpg')"
+      ></div>
+
+      <div class="hero-dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5 menu-background text-dark">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-5">MENU KAMI</h2>
+
+        <!-- Classic Coffee -->
+        <h3 class="mb-3">Classic Coffee</h3>
+        <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+          <div class="col" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100">
+              <img
+                src="img/coffee1.jpg"
+                loading="lazy"
+                class="card-img-top"
+                alt="Espresso"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Espresso</h5>
+                <p class="card-text">Kopi pekat untuk pecinta rasa kuat.</p>
+                <p class="card-text fw-bold">Rp 18.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100">
+              <img
+                src="img/coffee2.jpg"
+                loading="lazy"
+                class="card-img-top"
+                alt="Americano"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Americano</h5>
+                <p class="card-text">Kopi dengan rasa lebih ringan.</p>
+                <p class="card-text fw-bold">Rp 20.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100">
+              <img
+                src="img/coffee3.jpg"
+                loading="lazy"
+                class="card-img-top"
+                alt="Cappuccino"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Cappuccino</h5>
+                <p class="card-text">Kopi dengan foam susu lembut.</p>
+                <p class="card-text fw-bold">Rp 22.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-delay="400">
+            <div class="card h-100">
+              <img
+                src="img/Caramel.jpg"
+                loading="lazy"
+                class="card-img-top"
+                alt="Latte"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Latte</h5>
+                <p class="card-text">Kopi susu dengan rasa creamy.</p>
+                <p class="card-text fw-bold">Rp 22.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coffee Milk -->
+        <h3 class="mb-3">Coffee Milk</h3>
+        <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+          <div class="col" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100">
+              <img
+                src="img/coffee1.jpg"
+                loading="lazy"
+                class="card-img-top"
+                alt="Aren Latte"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Aren Latte</h5>
+                <p class="card-text">Kopi susu gula aren.</p>
+                <p class="card-text fw-bold">Rp 20.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100">
+              <img
+                src="img/Pistachio.jpg"
+                loading="lazy"
+                class="card-img-top"
+                alt="Hazelnut Coffee"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Hazelnut Coffee</h5>
+                <p class="card-text">Kopi susu dengan rasa kacang.</p>
+                <p class="card-text fw-bold">Rp 22.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100">
+              <img
+                src="img/Butterscotch.jpg"
+                loading="lazy"
+                class="card-img-top"
+                alt="Vanilla Latte"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Vanilla Latte</h5>
+                <p class="card-text">Rasa manis dan lembut.</p>
+                <p class="card-text fw-bold">Rp 22.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mocktail -->
+        <h3 class="mb-3">Mocktail</h3>
+        <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+          <div class="col" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100">
+              <img
+                src="img/Cocopeach.jpg"
+                loading="lazy"
+                class="card-img-top"
+                alt="Summer Splash"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Summer Splash</h5>
+                <p class="card-text">Segar untuk cuaca panas.</p>
+                <p class="card-text fw-bold">Rp 25.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100">
+              <img
+                src="img/Cranberries.jpg"
+                loading="lazy"
+                class="card-img-top"
+                alt="Berry Mint"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Berry Mint</h5>
+                <p class="card-text">Perpaduan buah beri dan mint.</p>
+                <p class="card-text fw-bold">Rp 26.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tea -->
+        <h3 class="mb-3">Tea</h3>
+        <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+          <div class="col" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100">
+              <img
+                src="img/Lychee.jpg"
+                loading="lazy"
+                class="card-img-top"
+                alt="Black Tea"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Black Tea</h5>
+                <p class="card-text">Teh hitam klasik.</p>
+                <p class="card-text fw-bold">Rp 12.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100">
+              <img src="img/Lemon.jpg" class="card-img-top" alt="Lemon Tea" />
+              <div class="card-body">
+                <h5 class="card-title">Lemon Tea</h5>
+                <p class="card-text">Segar dan asam manis.</p>
+                <p class="card-text fw-bold">Rp 14.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milk Based -->
+        <h3 class="mb-3">Milk Based</h3>
+        <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+          <div class="col" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100">
+              <img
+                src="img/Chocolate.jpg"
+                loading="lazy"
+                class="card-img-top"
+                alt="Chocolate Milk"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Chocolate Milk</h5>
+                <p class="card-text">Susu cokelat manis.</p>
+                <p class="card-text fw-bold">Rp 18.000</p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100">
+              <img
+                src="img/Red Velvet.jpg"
+                loading="lazy"
+                class="card-img-top"
+                alt="Strawberry Milk"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Strawberry Milk</h5>
+                <p class="card-text">Susu rasa stroberi segar.</p>
+                <p class="card-text fw-bold">Rp 18.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang -->
+    <section id="tentang" class="py-5 bg-white text-dark" data-aos="fade-right">
+      <div class="container text-center">
+        <h2 class="mb-4">Tentang Kami</h2>
+        <p>
+          Santiks Coffee & Calm adalah tempat berkumpul, bekerja, dan bersantai
+          sambil menikmati sajian kopi dan minuman berkualitas.
+        </p>
+      </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="py-5 bg-light text-dark" data-aos="fade-left">
+      <div class="container text-center">
+        <h2 class="mb-4">Kontak</h2>
+        <p>
+          Email:
+          <a href="mailto:santikscoffeeandcalm@gmail.com"
+            >santikscoffeeandcalm@gmail.com</a
+          >
+        </p>
+        <p>Jam Buka: 08:00 - 23:00 WIB</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <small>&copy; 2025 Santiks Coffee & Calm. All rights reserved.</small>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, easing: "ease-in-out", once: true });
+
+      // Loader
+      window.addEventListener("load", () => {
+        document.getElementById("loader").style.display = "none";
+      });
+
+      let currentSlide = 0;
+      const heroSlides = document.querySelectorAll(".hero-slide");
+      const heroDots = document.querySelectorAll(".hero-dots .dot");
+
+      function showHeroSlide(index) {
+        heroSlides.forEach((slide, i) => {
+          slide.classList.remove("active");
+          heroDots[i].classList.remove("active");
+        });
+        heroSlides[index].classList.add("active");
+        heroDots[index].classList.add("active");
+        currentSlide = index;
+      }
+
+      function nextHeroSlide() {
+        currentSlide = (currentSlide + 1) % heroSlides.length;
+        showHeroSlide(currentSlide);
+      }
+
+      function goToSlide(index) {
+        showHeroSlide(index);
+      }
+
+      setInterval(nextHeroSlide, 4000); // Auto slide setiap 4 detik
+      showHeroSlide(currentSlide);
+    </script>
+  </body>
+</html>
